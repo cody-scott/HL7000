@@ -53,6 +53,13 @@ from HL7000 import save_index
 save_index('/path/to/folder')
 ```
 
+### Import Folder from command line
+
+```
+python -m HL7000 /path/to/source/folder /path/to/target/folder
+```
+
+
 ## Future Plans
 
 * Companion GIS library for processing GIS data
