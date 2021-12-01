@@ -1,6 +1,6 @@
 # HL7000
 
-This library is made to help consolidate measurements from the HL7000 acoustic logger.
+This library is made to help consolidate measurements from the SebaKMT HL7000 acoustic logger.
 
 The goal is to centralize the data into measurement folders, provide an index for your measurement folders and to prevent duplicate records being saved.
 
