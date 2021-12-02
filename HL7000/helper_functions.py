@@ -21,7 +21,7 @@ def _get_json_file(data_folder):
 
 def get_measurement_info(json_file):
     df = pd.read_json(json_file, convert_dates=['measurement_datetime'])
-    return df[['measurement_datetime', 'measurement_name', 'uuid']]
+    return df[['measurement_datetime', 'measurement_name', 'uuid', "measurement_type"]]
 
 def save_index(target_folder):
     target_folder = Path(target_folder)
@@ -44,5 +44,5 @@ def append_index(target_folder, new_data):
         return save_index(target_folder)
     else:
         df = load_index(target_folder)
-        df = pd.concat([df, new_data[['measurement_datetime', 'measurement_name', 'uuid']]], ignore_index=True).drop_duplicates()
+        df = pd.concat([df, new_data[['measurement_datetime', 'measurement_name', 'uuid', "measurement_type"]]], ignore_index=True).drop_duplicates()
         _save_json(target_folder, df)
